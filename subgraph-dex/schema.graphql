@@ -1,0 +1,49 @@
+type DailyStatsUpdated @entity(immutable: true) {
+  id: Bytes!
+  day: BigInt! # uint256
+  volumeA: BigInt! # uint256
+  volumeB: BigInt! # uint256
+  fees: BigInt! # uint256
+  transactions: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type LiquidityAdded @entity(immutable: true) {
+  id: Bytes!
+  provider: Bytes! # address
+  amountA: BigInt! # uint256
+  amountB: BigInt! # uint256
+  liquidity: BigInt! # uint256
+  timestamp: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type LiquidityRemoved @entity(immutable: true) {
+  id: Bytes!
+  provider: Bytes! # address
+  amountA: BigInt! # uint256
+  amountB: BigInt! # uint256
+  liquidity: BigInt! # uint256
+  timestamp: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Swap @entity(immutable: true) {
+  id: Bytes!
+  user: Bytes! # address
+  tokenIn: Bytes! # address
+  tokenOut: Bytes! # address
+  amountIn: BigInt! # uint256
+  amountOut: BigInt! # uint256
+  fee: BigInt! # uint256
+  timestamp: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

@@ -1,0 +1,8 @@
+{
+  "sepolia": {
+    "SimpleDEX": {
+      "address": "0x15e8931cebd12aaa29fafd70610c0ea99ff4e614",
+      "startBlock": 9099262
+    }
+  }
+}
